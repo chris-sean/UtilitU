@@ -57,6 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				DCAAA0B02390CAAF0086E54E /* Package.swift */,
+				DCAAA0962390C5540086E54E /* UtilitU.h */,
+				DCAAA0972390C5540086E54E /* Info.plist */,
 				DCAAA0AF2390C6C00086E54E /* Sources */,
 				DCAAA0A02390C5540086E54E /* UtilitUTests */,
 				DCAAA0942390C5540086E54E /* Products */,
@@ -72,14 +74,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DCAAA0952390C5540086E54E /* UtilitU */ = {
-			isa = PBXGroup;
-			children = (
-				DCAAA0AD2390C61B0086E54E /* Logger.swift */,
-			);
-			path = UtilitU;
-			sourceTree = "<group>";
-		};
 		DCAAA0A02390C5540086E54E /* UtilitUTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,9 +86,7 @@
 		DCAAA0AF2390C6C00086E54E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DCAAA0952390C5540086E54E /* UtilitU */,
-				DCAAA0962390C5540086E54E /* UtilitU.h */,
-				DCAAA0972390C5540086E54E /* Info.plist */,
+				DCAAA0AD2390C61B0086E54E /* Logger.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -358,11 +350,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = XH9VRSP58U;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -384,11 +376,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = XH9VRSP58U;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -407,6 +399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XH9VRSP58U;
 				INFOPLIST_FILE = UtilitUTests/Info.plist;
@@ -426,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XH9VRSP58U;
 				INFOPLIST_FILE = UtilitUTests/Info.plist;
