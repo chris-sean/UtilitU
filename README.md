@@ -1,2 +1,3 @@
-# FLib
-May one utility function suit you.
+# UtilitU
+
+A description of this package.
