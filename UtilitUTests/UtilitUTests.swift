@@ -1,15 +1,15 @@
 //
-//  utilituTests.swift
-//  utilituTests
+//  UtilitUTests.swift
+//  UtilitUTests
 //
-//  Created by 薛菲 on 2019/11/28.
-//  Copyright © 2019 utilitu. All rights reserved.
+//  Created by 薛菲 on 2019/11/29.
+//  Copyright © 2019 UtilitU. All rights reserved.
 //
 
 import XCTest
-@testable import utilitu
+@testable import UtilitU
 
-class utilituTests: XCTestCase {
+class UtilitUTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -22,6 +22,7 @@ class utilituTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        logDebug("test1")
     }
 
     func testPerformanceExample() {
