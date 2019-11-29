@@ -31,7 +31,7 @@
 		DCDD7F962390211B00326FF2 /* utilituTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = utilituTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDD7F9B2390211B00326FF2 /* utilituTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utilituTests.swift; sourceTree = "<group>"; };
 		DCDD7F9D2390211B00326FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCDD7FA72390221400326FF2 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		DCDD7FA72390221400326FF2 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		DCDD7FA92390223E00326FF2 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = utilitu/Logger.swift; sourceTree = SOURCE_ROOT; };
 		DCDD7FAB2390225F00326FF2 /* LogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
