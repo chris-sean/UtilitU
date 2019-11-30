@@ -9,7 +9,7 @@ import Foundation
 import os.log
 
 @available(iOS 12.0, *)
-var logLevel = LogLevel.info
+public var logLevel = LogLevel.info
 
 @available(iOS 10.0, *)
 public enum LogLevel: Int {
