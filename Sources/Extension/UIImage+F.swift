@@ -5,11 +5,11 @@
 //  Created by Felix on 2018/6/7.
 //
 
-import Foundation
+import UIKit
 
-extension UIImage {
+public extension UIImage {
 
-    public func f_resize(toAspect fitSize: CGSize) -> UIImage? {
+    func f_resize(toAspect fitSize: CGSize) -> UIImage? {
         var reSize = fitSize
         if (fitSize.width / fitSize.height > self.size.width / self.size.height) {
             reSize.width = self.size.width * fitSize.height / self.size.height
@@ -19,12 +19,12 @@ extension UIImage {
         return self.f_resize(to: reSize)
     }
     
-    public func f_scaled(scale: CGFloat) -> UIImage? {
+    func f_scaled(scale: CGFloat) -> UIImage? {
         let size = CGSize(width: self.size.width * scale, height: self.size.height * scale)
         return self.f_resize(to: size)
     }
     
-    public func f_resize(to size: CGSize) -> UIImage? {
+    func f_resize(to size: CGSize) -> UIImage? {
         if (self.size.width < size.width + 0.5 && self.size.width > size.width - 0.5 && self.size.height < size.height + 0.5 && self.size.height > size.height - 0.5) {
             return self;
         }
@@ -40,7 +40,7 @@ extension UIImage {
 //        return reSizeImage
     }
 
-    public func f_compressedJPEGDataFor(limitedSize: Int) -> Data? {
+    func f_compressedJPEGDataFor(limitedSize: Int) -> Data? {
         var quality: CGFloat = 1
         let guessMaxSize = self.size.width * self.size.height * 0.5
         let maxSize = CGFloat(limitedSize)
@@ -50,20 +50,20 @@ extension UIImage {
                 quality = 0.5
             }
         }
-        var imageData = UIImageJPEGRepresentation(self, quality)
+        var imageData = self.jpegData(compressionQuality: quality)
         if imageData == nil {
             return nil
         }
         let minSize = maxSize * 0.1
         var lastDataLength = imageData!.count
-        f_logDebug("compressed image size:\(imageData!.count)")
+        logDebug("compressed image size:\(imageData!.count)")
         while imageData!.count >= limitedSize {
             quality *= 0.5;
-            imageData = UIImageJPEGRepresentation(self, quality);
+            imageData = self.jpegData(compressionQuality: quality);
             if imageData == nil {
                 return nil
             }
-            f_logDebug("compressed image size:\(imageData!.count)")
+            logDebug("compressed image size:\(imageData!.count)")
             if CGFloat(lastDataLength - imageData!.count) < minSize { // 可以压缩的空间有限甚至没有压缩空间了
                 break;
             }
