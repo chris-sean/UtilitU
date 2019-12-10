@@ -9,22 +9,22 @@ import UIKit
 
 public extension UIImage {
 
-    func f_resize(toAspect fitSize: CGSize) -> UIImage? {
+    func resize(toAspect fitSize: CGSize) -> UIImage? {
         var reSize = fitSize
         if (fitSize.width / fitSize.height > self.size.width / self.size.height) {
             reSize.width = self.size.width * fitSize.height / self.size.height
         } else {
             reSize.height = self.size.height * fitSize.width / self.size.width
         }
-        return self.f_resize(to: reSize)
+        return self.resize(to: reSize)
     }
     
-    func f_scaled(scale: CGFloat) -> UIImage? {
+    func scaled(scale: CGFloat) -> UIImage? {
         let size = CGSize(width: self.size.width * scale, height: self.size.height * scale)
-        return self.f_resize(to: size)
+        return self.resize(to: size)
     }
     
-    func f_resize(to size: CGSize) -> UIImage? {
+    func resize(to size: CGSize) -> UIImage? {
         if (self.size.width < size.width + 0.5 && self.size.width > size.width - 0.5 && self.size.height < size.height + 0.5 && self.size.height > size.height - 0.5) {
             return self;
         }
@@ -40,7 +40,7 @@ public extension UIImage {
 //        return reSizeImage
     }
 
-    func f_compressedJPEGDataFor(limitedSize: Int) -> Data? {
+    func compressedJPEGDataFor(limitedSize: Int) -> Data? {
         var quality: CGFloat = 1
         let guessMaxSize = self.size.width * self.size.height * 0.5
         let maxSize = CGFloat(limitedSize)

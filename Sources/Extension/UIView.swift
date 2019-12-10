@@ -9,21 +9,21 @@ import UIKit
 
 public extension UIView {
     
-    func f_addConstraints(with visualFormat: String, views: [String: Any]) {
+    func addConstraints(with visualFormat: String, views: [String: Any]) {
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: visualFormat, options: [], metrics: nil, views: views))
     }
     
-    func f_addConstraints(with visualFormat: String, options: NSLayoutConstraint.FormatOptions, metrics: [String: Any]?, views: [String: Any]) {
+    func addConstraints(with visualFormat: String, options: NSLayoutConstraint.FormatOptions, metrics: [String: Any]?, views: [String: Any]) {
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: visualFormat, options: options, metrics: metrics, views: views))
     }
     
-    func f_addConstraintsToFill(theView: UIView) {
+    func addConstraintsToFill(theView: UIView) {
         theView.translatesAutoresizingMaskIntoConstraints = false
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|[theView]|", options: [], metrics: nil, views: ["theView": theView]))
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[theView]|", options: [], metrics: nil, views: ["theView": theView]))
     }
     
-    func f_snap() -> UIImage? {
+    func snap() -> UIImage? {
         let layer = self.layer
         let rect = layer.frame
         UIGraphicsBeginImageContextWithOptions(rect.size, layer.isOpaque, UIScreen.main.scale)
