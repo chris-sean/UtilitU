@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension CGFloat {
+open extension CGFloat {
     static var OnePixel: CGFloat {
         return 1.0 / UIScreen.main.scale
     }
