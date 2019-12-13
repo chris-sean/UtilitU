@@ -7,7 +7,7 @@
 
 import UIKit
 
-open extension UIImage {
+public extension UIImage {
 
     func resize(toAspect fitSize: CGSize) -> UIImage? {
         var reSize = fitSize
