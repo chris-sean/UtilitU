@@ -7,7 +7,7 @@
 
 import UIKit
 
-public extension UIView {
+open extension UIView {
     
     func addConstraints(with visualFormat: String, views: [String: Any]) {
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: visualFormat, options: [], metrics: nil, views: views))

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public extension Dictionary where Key == String {
+open extension Dictionary where Key == String {
 
     func string(_ forKey: String, defaultValue: String = "") -> String {
         return self[forKey] as? String ?? defaultValue
